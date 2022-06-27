@@ -105,3 +105,6 @@ curl -X PUT \
   -H 'content-type: application/json' \
   -d '{"email": "jsmith@gmail.com"}'
 ```
+#### Monitor
+http://localhost:8080/topics/student_enrolled?o=-1&p=-1&q&s=50#messages
+![image](https://user-images.githubusercontent.com/8210441/175857363-4e7c9c31-50cb-4726-a6c0-f5d21e93cc85.png)
