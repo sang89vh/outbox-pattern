@@ -1,0 +1,37 @@
+2022-06-27 10:30:25.816  INFO 17828 --- [main] com.sohan.student.StudentApplication     : Starting StudentApplication on ib1l030840 with PID 17828 (/home/ib-1l-030840/Documents/bond/outbox-pattern/student-microservice/target/classes started by ib-1l-030840 in /home/ib-1l-030840/Documents/bond/outbox-pattern/student-microservice)
+2022-06-27 10:30:25.820  INFO 17828 --- [main] com.sohan.student.StudentApplication     : No active profile set, falling back to default profiles: default
+2022-06-27 10:30:26.680  INFO 17828 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2022-06-27 10:30:26.733  INFO 17828 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 46ms. Found 2 repository interfaces.
+2022-06-27 10:30:27.037  INFO 17828 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$57ecbe2b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-06-27 10:30:27.316  INFO 17828 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2022-06-27 10:30:27.339  INFO 17828 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-06-27 10:30:27.340  INFO 17828 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.17]
+2022-06-27 10:30:27.400  INFO 17828 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-06-27 10:30:27.400  INFO 17828 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1552 ms
+2022-06-27 10:30:27.820  INFO 17828 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-06-27 10:30:27.891  INFO 17828 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-06-27 10:30:27.932  INFO 17828 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2022-06-27 10:30:27.993  INFO 17828 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.9.Final}
+2022-06-27 10:30:27.994  INFO 17828 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2022-06-27 10:30:28.125  INFO 17828 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2022-06-27 10:30:28.371  INFO 17828 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2022-06-27 10:30:28.459  INFO 17828 --- [main] o.h.e.j.e.i.LobCreatorBuilderImpl        : HHH000421: Disabling contextual LOB creation as hibernate.jdbc.lob.non_contextual_creation is true
+2022-06-27 10:30:28.462  INFO 17828 --- [main] org.hibernate.type.BasicTypeRegistry     : HHH000270: Type registration [java.util.UUID] overrides previous : org.hibernate.type.UUIDBinaryType@6accc881
+2022-06-27 10:30:28.890  INFO 17828 --- [main] o.h.t.schema.internal.SchemaCreatorImpl  : HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@2e86f258'
+2022-06-27 10:30:28.892  INFO 17828 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-06-27 10:30:29.265  INFO 17828 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-06-27 10:30:29.301  WARN 17828 --- [main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-06-27 10:30:29.529  INFO 17828 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2022-06-27 10:30:29.587  INFO 17828 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2022-06-27 10:30:29.589  INFO 17828 --- [main] com.sohan.student.StudentApplication     : Started StudentApplication in 4.024 seconds (JVM running for 6.395)
+2022-06-27 10:42:25.308  INFO 17828 --- [http-nio-8081-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-06-27 10:42:25.309  INFO 17828 --- [http-nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-06-27 10:42:25.318  INFO 17828 --- [http-nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
+2022-06-27 10:42:25.432  INFO 17828 --- [http-nio-8081-exec-2] c.s.s.service.impl.StudentServiceImpl    : Enroll Student details for StudentId: Megan Clark
+2022-06-27 10:42:25.495  INFO 17828 --- [http-nio-8081-exec-2] com.sohan.student.outbox.EventService    : Handling event : OutBoxEntity(uuid=837996e4-2495-41c3-b9ea-73a14fb0970d, aggregateId=4, eventType=STUDENT_ENROLLED, payload={"studentId":4,"name":"Megan Clark","email":"mclark@gmail.com","address":"Toronto, ON"}, createdOn=Mon Jun 27 10:42:25 ICT 2022).
+2022-06-27 10:42:37.909  INFO 17828 --- [http-nio-8081-exec-3] c.s.s.service.impl.StudentServiceImpl    : Enroll Student details for StudentId: Megan Clark
+2022-06-27 10:42:37.911  INFO 17828 --- [http-nio-8081-exec-3] com.sohan.student.outbox.EventService    : Handling event : OutBoxEntity(uuid=11cecef7-2d76-412c-b957-64c4dcc35eab, aggregateId=5, eventType=STUDENT_ENROLLED, payload={"studentId":5,"name":"Megan Clark","email":"mclark@gmail.com","address":"Toronto, ON"}, createdOn=Mon Jun 27 10:42:37 ICT 2022).
+2022-06-27 10:42:42.342  INFO 17828 --- [http-nio-8081-exec-4] c.s.s.service.impl.StudentServiceImpl    : Enroll Student details for StudentId: Megan Clark
+2022-06-27 10:42:42.347  INFO 17828 --- [http-nio-8081-exec-4] com.sohan.student.outbox.EventService    : Handling event : OutBoxEntity(uuid=838000e0-ffad-4bb8-81a0-8da84481049d, aggregateId=6, eventType=STUDENT_ENROLLED, payload={"studentId":6,"name":"Megan Clark","email":"mclark@gmail.com","address":"Toronto, ON"}, createdOn=Mon Jun 27 10:42:42 ICT 2022).

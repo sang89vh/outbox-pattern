@@ -29,13 +29,13 @@ docker-compose up -d
 
 #### - Setting up needed Kafka Topics
 ```shell
-docker exec -t kafka /usr/bin/kafka-topics \
+sudo docker exec -t kafka /usr/bin/kafka-topics \
       --create --bootstrap-server :9092 \
       --topic student_email_changed \
       --partitions 1 \
       --replication-factor 1
       
-docker exec -t kafka /usr/bin/kafka-topics \
+sudo docker exec -t kafka /usr/bin/kafka-topics \
       --create --bootstrap-server :9092 \
       --topic student_enrolled \
       --partitions 1 \
@@ -61,19 +61,19 @@ curl -X POST \
       "tombstones.on.delete": "false",
       "table.whitelist": "public.outbox",
       "transforms": "outbox",
-      "transforms.outbox.type": "com.sohan.transform.CustomTransformation"
+       "transforms.outbox.type": "io.debezium.transforms.outbox.EventRouter"
    }
 }'
 ```
 
 #### - Consuming Kafka Topics
 ```shell
-docker exec -t kafka /usr/bin/kafka-console-consumer \
+sudo docker exec -t kafka /usr/bin/kafka-console-consumer \
       --bootstrap-server :9092 \
       --from-beginning \
       --topic student_enrolled
 
-docker exec -t kafka /usr/bin/kafka-console-consumer \
+sudo docker exec -t kafka /usr/bin/kafka-console-consumer \
       --bootstrap-server :9092 \
       --from-beginning \
       --topic student_email_changed
